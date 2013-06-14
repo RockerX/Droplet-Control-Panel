@@ -15,7 +15,7 @@ body {
 	margin: 0;
 	padding: 0;
 	color: #000;
-	background-color: #CCC;
+	background-color: #FFF;
 }
 
 /* ~~ Element/tag selectors ~~ */
@@ -48,11 +48,14 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 
 /* ~~ this container surrounds all other divs giving them their percentage-based width ~~ */
 .container {
-	width: 80%;
+	width: auto;
 	max-width: 1260px;/* a max-width may be desirable to keep this layout from getting too wide on a large monitor. This keeps line length more readable. IE6 does not respect this declaration. */
 	min-width: 780px;/* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. IE6 does not respect this declaration. */
-	background: #FFF;
-	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100%. */
+	background: #FFF; /* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100%. */
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
 }
 
 /* ~~ This is the layout information. ~~ 
@@ -91,13 +94,14 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 }
 body,td,th {
 	color: #000;
+	font-size: 12px;
 }
 -->
 </style></head>
 
 <body>
 
-<div class="container">
+<div>
   <div class="content">
     <h1>Droplet Control Panel    </h1>
     <form name="form1" method="post" action="">
@@ -112,16 +116,16 @@ body,td,th {
       <label for="api_key">API Key</label>
       <input type="text" name="api_key" id="api_key">
     </form>
-    <p><!-- end .content -->(These do nothing as of now.)</p>
-    <p><a href="https://api.digitalocean.com/droplets/?client_id=9STB0rE4RJ57P3CE8k6sR&api_key=qXNNEY2PQkEtrAfkN7v4P6b5PVVi8B6cXHQKxjxw1">Droplets/Status</a></p>
-    <p><a href="https://api.digitalocean.com/droplets/218727/power_on/?client_id=9STB0rE4RJ57P3CE8k6sR&api_key=qXNNEY2PQkEtrAfkN7v4P6b5PVVi8B6cXHQKxjxw1">Power On</a></p>
-    <p><a href="https://api.digitalocean.com/droplets/218727/power_off/?client_id=9STB0rE4RJ57P3CE8k6sR&api_key=qXNNEY2PQkEtrAfkN7v4P6b5PVVi8B6cXHQKxjxw1">Power Off</a></p>
-    <p><a href="https://api.digitalocean.com/droplets/218727/reboot/?client_id=9STB0rE4RJ57P3CE8k6sR&api_key=qXNNEY2PQkEtrAfkN7v4P6b5PVVi8B6cXHQKxjxw1">Reboot</a></p>
-    <p><a href="https://api.digitalocean.com/droplets/218727/power_cycle/?client_id=9STB0rE4RJ57P3CE8k6sR&api_key=qXNNEY2PQkEtrAfkN7v4P6b5PVVi8B6cXHQKxjxw1">Power Cycle</a></p>
-    <p>(Power off before resize.)</p>
-    <p><a href="https://api.digitalocean.com/droplets/218727/resize/?size_id=33&client_id=9STB0rE4RJ57P3CE8k6sR&api_key=qXNNEY2PQkEtrAfkN7v4P6b5PVVi8B6cXHQKxjxw1">Resize 512MB</a></p>
-    <p><a href="https://api.digitalocean.com/droplets/218727/resize/?size_id=34&client_id=9STB0rE4RJ57P3CE8k6sR&api_key=qXNNEY2PQkEtrAfkN7v4P6b5PVVi8B6cXHQKxjxw1">Resize 1GB</a></p>
-    <p><a href="https://api.digitalocean.com/droplets/218727/resize/?size_id=35&client_id=9STB0rE4RJ57P3CE8k6sR&api_key=qXNNEY2PQkEtrAfkN7v4P6b5PVVi8B6cXHQKxjxw1">Resize 2GB</a></p>
+    <p><!-- end .content -->(These do nothing as of now.)    </p>
+    <p><a href="https://api.digitalocean.com/droplets/?client_id=9STB0rE4RJ57P3CE8k6sR&api_key=qXNNEY2PQkEtrAfkN7v4P6b5PVVi8B6cXHQKxjxw1"><img src="imgs/drop_status.png" width="100" height="30"></a></p>
+    <p><a href="https://api.digitalocean.com/droplets/218727/power_on/?client_id=9STB0rE4RJ57P3CE8k6sR&api_key=qXNNEY2PQkEtrAfkN7v4P6b5PVVi8B6cXHQKxjxw1"><img src="imgs/power_on.png" width="100" height="30"></a></p>
+    <p><a href="https://api.digitalocean.com/droplets/218727/power_off/?client_id=9STB0rE4RJ57P3CE8k6sR&api_key=qXNNEY2PQkEtrAfkN7v4P6b5PVVi8B6cXHQKxjxw1"><img src="imgs/power_off.png" width="100" height="30"></a></p>
+    <p><a href="https://api.digitalocean.com/droplets/218727/reboot/?client_id=9STB0rE4RJ57P3CE8k6sR&api_key=qXNNEY2PQkEtrAfkN7v4P6b5PVVi8B6cXHQKxjxw1"><img src="imgs/reboot.png" width="100" height="30"></a></p>
+    <p><a href="https://api.digitalocean.com/droplets/218727/power_cycle/?client_id=9STB0rE4RJ57P3CE8k6sR&api_key=qXNNEY2PQkEtrAfkN7v4P6b5PVVi8B6cXHQKxjxw1"><img src="imgs/power_cycle.png" width="100" height="30"></a></p>
+    <p>(Power off before resize.)    </p>
+    <p><a href="https://api.digitalocean.com/droplets/218727/resize/?size_id=66&client_id=9STB0rE4RJ57P3CE8k6sR&api_key=qXNNEY2PQkEtrAfkN7v4P6b5PVVi8B6cXHQKxjxw1"><img src="imgs/resize_512.png" width="100" height="30"></a></p>
+    <p><a href="https://api.digitalocean.com/droplets/218727/resize/?size_id=63&client_id=9STB0rE4RJ57P3CE8k6sR&api_key=qXNNEY2PQkEtrAfkN7v4P6b5PVVi8B6cXHQKxjxw1"><img src="imgs/resize_1.png" width="100" height="30"></a></p>
+    <p><a href="https://api.digitalocean.com/droplets/218727/resize/?size_id=62&client_id=9STB0rE4RJ57P3CE8k6sR&api_key=qXNNEY2PQkEtrAfkN7v4P6b5PVVi8B6cXHQKxjxw1"><img src="imgs/resize_2.png" width="100" height="30"></a></p>
     <p>&nbsp;</p>
   </div>
   <!-- end .container --></div>
